@@ -32,6 +32,7 @@ import java.util.Optional;
 public class JdbcTemplateItemRepositoryV3 implements ItemRepository {
     private final NamedParameterJdbcTemplate template;
     private final SimpleJdbcInsert jdbcInsert;
+
     public JdbcTemplateItemRepositoryV3(DataSource dataSource) {
         this.template = new NamedParameterJdbcTemplate(dataSource);
         this.jdbcInsert = new SimpleJdbcInsert(dataSource)
